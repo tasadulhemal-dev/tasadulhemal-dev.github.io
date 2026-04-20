@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M.T.I. Hemal — Supply Chain Traceability Researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FCFCFA;--bg2:#F4F3EE;--bg3:#EAE8E0;--card:#fff;--text:#1B1B19;--muted:#71706B;--light:#A3A29C;--accent:#0A5C47;--accent-h:#084A39;--al:#D6EFE6;--ap:#EDF8F3;--warm:#C45D2C;--wl:#FDF0E9;--indigo:#4A3FA0;--il:#EDEBFA;--teal:#0E7B6B;--tl:#E0F5F0;--serif:'Playfair Display',Georgia,serif;--display:'Cormorant Garamond',Georgia,serif;--sans:'Source Sans 3',system-ui,sans-serif;--mw:1080px;--r:12px}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--text);background:var(--bg);line-height:1.7;font-size:15.5px;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none;transition:color .2s}a:hover{color:var(--accent-h)}
+.ct{max-width:var(--mw);margin:0 auto;padding:0 28px}
+nav{position:sticky;top:0;z-index:100;background:rgba(252,252,250,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,0,0,.05)}
+nav .in{max-width:var(--mw);margin:0 auto;padding:12px 28px;display:flex;align-items:center;justify-content:space-between}
+.nb{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nl{width:34px;height:34px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.nl svg{width:18px;height:18px}
+.nn{font-family:var(--serif);font-size:16px;font-weight:600;color:var(--text)}
+.nk{display:flex;gap:24px;font-size:13px;font-weight:500}
+.nk a{color:var(--muted);padding:4px 0;position:relative}.nk a:hover{color:var(--accent);text-decoration:none}
+.nk a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--accent);transform:scaleX(0);transition:transform .2s}.nk a:hover::after{transform:scaleX(1)}
+.hero{padding:80px 0 64px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-120px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(10,92,71,.06),transparent 70%);pointer-events:none}
+.hg{display:grid;grid-template-columns:1fr 340px;gap:48px;align-items:center}
+.he{display:inline-flex;align-items:center;gap:6px;background:var(--ap);color:var(--accent);font-size:12px;font-weight:600;padding:5px 14px;border-radius:20px;margin-bottom:18px;letter-spacing:.3px}
+.he svg{width:14px;height:14px}
+.hero h1{font-family:var(--display);font-size:46px;line-height:1.12;letter-spacing:-.01em;margin-bottom:18px;font-weight:600}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .ld{font-size:17px;color:var(--muted);max-width:480px;margin-bottom:28px;text-align:justify}
+.hb{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+.bd{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid}
+.bd svg{width:13px;height:13px}
+.bg{background:var(--ap);color:var(--accent);border-color:rgba(10,92,71,.12)}
+.bw{background:var(--wl);color:var(--warm);border-color:rgba(196,93,44,.12)}
+.bi{background:var(--il);color:var(--indigo);border-color:rgba(74,63,160,.12)}
+.bt{background:var(--tl);color:var(--teal);border-color:rgba(14,123,107,.12)}
+.ha{display:flex;gap:12px}
+.bp{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;padding:12px 28px;border-radius:8px;font-weight:600;font-size:14px;transition:all .2s;border:none;cursor:pointer}
+.bp:hover{background:var(--accent-h);transform:translateY(-1px);color:#fff;text-decoration:none}
+.bp svg,.bo svg{width:16px;height:16px}
+.bo{display:inline-flex;align-items:center;gap:8px;color:var(--text);padding:12px 28px;border-radius:8px;font-weight:600;font-size:14px;border:1.5px solid var(--bg3);transition:all .2s}
+.bo:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.hpc{position:relative}
+.hpf{width:280px;height:350px;border-radius:20px;background:linear-gradient(145deg,var(--ap),var(--bg2));border:1px solid rgba(10,92,71,.08);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hpi{font-family:var(--serif);font-size:64px;font-weight:700;color:var(--accent);opacity:.3}
+.hpl{position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);background:var(--card);border:1px solid rgba(0,0,0,.06);border-radius:10px;padding:10px 20px;display:flex;align-items:center;gap:10px;white-space:nowrap;box-shadow:0 4px 20px rgba(0,0,0,.04)}
+.dot{width:8px;height:8px;border-radius:50%;background:#2ECC71}
+.hpl span{font-size:12px;font-weight:600}
+.hsf{position:absolute;top:20px;right:-40px;background:var(--card);border:1px solid rgba(0,0,0,.06);border-radius:10px;padding:10px 16px;box-shadow:0 4px 20px rgba(0,0,0,.04)}
+.hsf .n{font-size:20px;font-weight:700;color:var(--accent);font-family:var(--serif)}
+.hsf .l{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;font-weight:600}
+section{padding:72px 0}
+.sd{border:none;border-top:1px solid var(--bg2);margin:0}
+.sh{margin-bottom:40px}
+.sl{display:inline-flex;align-items:center;gap:6px;font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);font-weight:700;margin-bottom:8px}
+.sl svg{width:14px;height:14px}
+.st{font-family:var(--serif);font-size:30px;line-height:1.2;letter-spacing:-.01em;margin-bottom:8px}
+.sde{color:var(--muted);max-width:560px;font-size:15px;text-align:left}
+.ob{background:var(--card);border:1px solid rgba(0,0,0,.06);border-radius:16px;padding:32px 36px;position:relative;display:flex;gap:20px}
+.ob::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--accent);border-radius:4px 0 0 4px}
+.oi{min-width:44px;height:44px;border-radius:10px;background:var(--ap);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.oi svg{width:20px;height:20px;color:var(--accent)}
+.ob p{font-size:14px;line-height:1.8;color:var(--muted);text-align:justify}.ob .sg{margin-top:12px;font-weight:600;color:var(--text);font-size:14px;text-align:left}
+.pg{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.pc{background:var(--card);border:1px solid rgba(0,0,0,.06);border-radius:14px;padding:28px;transition:all .25s}
+.pc:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,.05)}
+.pi{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.pi svg{width:22px;height:22px}
+.pc h4{font-size:16px;font-weight:600;margin-bottom:6px}.pc p{font-size:13.5px;color:var(--muted);line-height:1.65;text-align:justify}
+.tl{position:relative;padding-left:32px}
+.tl::before{content:'';position:absolute;left:11px;top:12px;bottom:12px;width:2px;background:linear-gradient(180deg,var(--accent),var(--al))}
+.ti{position:relative;margin-bottom:32px}.ti:last-child{margin-bottom:0}
+.td{position:absolute;left:-28px;top:4px;width:16px;height:16px;border-radius:50%;background:var(--accent);border:3px solid var(--bg);box-shadow:0 0 0 2px var(--al)}
+.ty{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:var(--accent);padding:2px 10px;border-radius:4px;margin-bottom:6px}
+.ti h4{font-size:15px;font-weight:600;margin-bottom:4px}.ti p{font-size:13.5px;color:var(--muted);line-height:1.65;text-align:justify}
+.rc{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.rcl h3{font-size:15px;font-weight:700;margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid var(--al);display:flex;align-items:center;gap:8px}
+.rcl h3 svg{width:18px;height:18px;color:var(--accent)}
+.re{margin-bottom:22px;padding-left:16px;border-left:2px solid var(--bg2);transition:border-color .2s}
+.re:hover{border-left-color:var(--accent)}
+.rr{font-weight:600;font-size:14px}.rco{color:var(--accent);font-size:13px;font-weight:500}
+.rp{font-size:12px;color:var(--light);margin:2px 0 6px;display:flex;align-items:center;gap:4px}
+.rp svg{width:12px;height:12px}
+.re p{font-size:13px;color:var(--muted);line-height:1.6;text-align:justify}
+.sr{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.sp{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:500;padding:6px 14px;border-radius:6px;background:var(--bg2);transition:all .2s}
+.sp:hover{background:var(--ap);color:var(--accent)}
+.sp svg{width:13px;height:13px}
+.sa{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sac{background:var(--card);border:1px solid rgba(0,0,0,.06);border-radius:14px;padding:24px;text-align:center;transition:all .25s}
+.sac:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,.05)}
+.sai{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+.sai svg{width:24px;height:24px}
+.sac h4{font-size:14px;font-weight:600;margin-bottom:6px}.sac p{font-size:12.5px;color:var(--muted);line-height:1.55}
+.pjg{display:grid;gap:24px}
+.pjc{background:var(--card);border:1px solid rgba(0,0,0,.06);border-radius:16px;overflow:hidden;display:grid;grid-template-columns:300px 1fr;transition:all .25s}
+.pjc:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.06)}
+.pjv{padding:32px;display:flex;flex-direction:column;justify-content:space-between;min-height:240px}
+.v1{background:linear-gradient(135deg,#0A5C47,#15946F)}.v2{background:linear-gradient(135deg,#4A3FA0,#7B6FD4)}.v3{background:linear-gradient(135deg,#B8451A,#D4722A)}
+.pji{width:48px;height:48px;background:rgba(255,255,255,.15);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:auto}
+.pji svg{width:24px;height:24px;color:#fff}
+.pjt{font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:rgba(255,255,255,.6);font-weight:600;margin-bottom:4px}
+.pjv h3{font-family:var(--serif);font-size:22px;color:#fff;line-height:1.25}
+.pjb{padding:28px}
+.pjb h4{font-size:16px;font-weight:600;margin-bottom:8px}.pjb p{font-size:13.5px;color:var(--muted);line-height:1.65;margin-bottom:10px;text-align:justify}
+.pjh{display:flex;align-items:center;gap:8px;background:var(--ap);border-radius:8px;padding:10px 14px;margin-bottom:14px}
+.pjh svg{width:16px;height:16px;color:var(--accent);flex-shrink:0}
+.pjh span{font-size:12px;color:var(--accent);font-weight:500;line-height:1.4}
+.pt{display:flex;flex-wrap:wrap;gap:6px}
+.tg{font-size:11px;font-weight:600;padding:4px 10px;border-radius:5px}
+.tgg{background:var(--ap);color:var(--accent)}.tgw{background:var(--wl);color:var(--warm)}.tgi{background:var(--il);color:var(--indigo)}.tgt{background:var(--tl);color:var(--teal)}
+.pbl{display:grid;gap:14px}
+.pbc{background:var(--card);border:1px solid rgba(0,0,0,.06);border-radius:12px;padding:20px 24px;display:flex;gap:16px;align-items:flex-start;transition:all .2s}
+.pbc:hover{border-color:var(--accent);box-shadow:0 4px 16px rgba(10,92,71,.06)}
+.pbi{min-width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.pbi svg{width:18px;height:18px}
+.pbc h4{font-size:14px;font-weight:600;margin-bottom:3px;line-height:1.4;text-align:left}
+.pm{font-size:12px;color:var(--muted)}.pm strong{color:var(--accent);font-weight:600}
+.cb{background:var(--accent);border-radius:20px;padding:52px 48px;color:#fff;text-align:center;position:relative;overflow:hidden}
+.cb::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:rgba(255,255,255,.04);border-radius:50%}
+.cb h2{font-family:var(--serif);font-size:28px;margin-bottom:6px;position:relative}
+.cb>p{opacity:.8;margin-bottom:28px;font-size:15px;position:relative}
+.cr{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;position:relative}
+.cl{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);color:#fff;padding:12px 24px;border-radius:10px;font-size:13px;font-weight:600;transition:all .2s}
+.cl:hover{background:rgba(255,255,255,.22);color:#fff;text-decoration:none;transform:translateY(-1px)}
+.cl svg{width:16px;height:16px}
+footer{text-align:center;padding:28px;font-size:12px;color:var(--light);border-top:1px solid var(--bg2)}
+footer a{color:var(--muted)}
+@media(max-width:820px){.hg{grid-template-columns:1fr;text-align:center}.hero .ld{margin:0 auto 28px}.hb,.ha{justify-content:center}.hpc{display:none}.pg{grid-template-columns:1fr}.rc{grid-template-columns:1fr}.sa{grid-template-columns:1fr 1fr}.pjc{grid-template-columns:1fr}.pjv{min-height:140px}.nk{gap:14px;font-size:12px}.hero h1{font-size:36px}.cb{padding:36px 24px}}
+@media(max-width:520px){.sa{grid-template-columns:1fr}.nk{display:none}}
+</style>
+</head>
+<body>
+
+<nav><div class="in">
+<a href="#" class="nb"><div class="nl"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><span class="nn">M.T.I. Hemal</span></a>
+<div class="nk"><a href="#about">About</a><a href="#philosophy">Philosophy</a><a href="#goals">Goals</a><a href="#resume">Resume</a><a href="#projects">Projects</a><a href="#publications">Publications</a><a href="#contact">Contact</a></div>
+</div></nav>
+
+<!-- HERO -->
+<section class="hero" id="about"><div class="ct"><div class="hg"><div>
+<div class="he"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Seeking Research Positions in Supply Chain Traceability</div>
+<h1>Making textile supply chains <em>traceable</em>, transparent &amp; accountable</h1>
+<p class="ld">Researcher combining 6+ years of hands-on garment supply chain experience in Bangladesh with advanced training in LCA, Digital Product Passports, and circular textile systems. Specializing in traceability frameworks that bridge Tier 2–4 production reality with EU regulatory requirements.</p>
+<div class="hb">
+<span class="bd bg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>Supply Chain Traceability</span>
+<span class="bd bw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/><path d="M14 2v6h6"/></svg>Digital Product Passports</span>
+<span class="bd bi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><path d="M12 12v4"/><path d="M8 12h8"/></svg>Blockchain &amp; Data Interoperability</span>
+<span class="bd bt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0118.8-4.3M22 12.5a10 10 0 01-18.8 4.2"/></svg>LCA &amp; Circular Economy</span>
+</div>
+<div class="ha">
+<a href="#contact" class="bp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>Get in Touch</a>
+<a href="#projects" class="bo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>View Research</a>
+</div>
+</div>
+<div class="hpc"><div class="hpf"><span class="hpi">MTI</span></div><div class="hpl"><span class="dot"></span><span>Enschede, Netherlands</span></div><div class="hsf"><div class="n">6+</div><div class="l">Years Supply Chain</div></div></div>
+</div></div></section>
+
+<hr class="sd ct">
+
+<!-- ORIGINALITY -->
+<section><div class="ct"><div class="sh"><div class="sl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Statement of Originality</div></div>
+<div class="ob"><div class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+<div><p>This portfolio represents my original work and professional development as a supply chain traceability researcher. All projects, research outputs, and content presented herein are the results of my own efforts and collaborative contributions within academic and professional settings. The information is confidential and intended for professional evaluation purposes.</p>
+<p class="sg">M.T.I. Hemal — Enschede, The Netherlands, 2026</p></div></div>
+</div></section>
+
+<hr class="sd ct">
+
+<!-- PHILOSOPHY -->
+<section id="philosophy"><div class="ct"><div class="sh"><div class="sl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>Work Philosophy</div>
+<div class="st">Traceability starts where production happens</div>
+<p class="sde">EU traceability frameworks will only succeed if they account for the realities of Tier 2–4 production. I bring that missing ground-level perspective to academic research.</p></div>
+<div class="pg">
+<div class="pc"><div class="pi" style="background:var(--ap)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div><h4>Production-floor traceability</h4><p>Having managed sourcing across Bangladeshi garment factories, I understand where traceability data breaks down — at the raw material, spinning, and dyeing stages. My research starts from these gaps, not from theoretical frameworks alone.</p></div>
+<div class="pc"><div class="pi" style="background:var(--tl)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/><path d="M14 2v6h6M8 13h2M8 17h2M14 13h2M14 17h2"/></svg></div><h4>Regulation-ready data</h4><p>Through the DPP4CD project with MUD Jeans, I develop practical data collection protocols aligned with EU ESPR, PEF, and the upcoming Textile Labelling Regulation — translating regulatory complexity into actionable supplier guidance.</p></div>
+<div class="pc"><div class="pi" style="background:var(--wl)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--warm)" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><path d="M12 12v4M8 12h8"/></svg></div><h4>Technology-aware research</h4><p>I investigate how blockchain, RFID, IoT sensors, and interoperability standards (GS1/EPCIS, JSON-LD) can create tamper-proof, machine-readable traceability records across multi-tier textile supply chains.</p></div>
+<div class="pc"><div class="pi" style="background:var(--il)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--indigo)" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98"/></svg></div><h4>Global South perspective</h4><p>Traceability systems often fail at the first mile. My cross-cultural fluency and network across Bangladeshi, Dutch, and Ghanaian textile ecosystems enables inclusive research that works for suppliers, not just brands.</p></div>
+</div></div></section>
+
+<hr class="sd ct">
+
+<!-- CAREER GOALS -->
+<section id="goals"><div class="ct"><div class="sh"><div class="sl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>Career Goals</div>
+<div class="st">Five-year research trajectory</div><p class="sde">Building toward a leading role in textile supply chain traceability research, bridging EU regulation with Global South production systems.</p></div>
+<div class="tl">
+<div class="ti"><div class="td"></div><div class="ty">2025 – 2026</div><h4>Complete MSc with DPP4CD research output</h4><p>Graduate from Saxion with published research on LCA data protocols for circular denim Digital Product Passports. Deliver a validated traceability framework for Tier 2–4 data collection in partnership with MUD Jeans and Tejidos Royo.</p></div>
+<div class="ti"><div class="td"></div><div class="ty">2026 – 2027</div><h4>Research position: textile supply chain traceability</h4><p>Join a research institute (TNO, Wuppertal, HKRITA), traceability platform (TrusTrace, Textile Genesis, AWARE), or innovation hub (Fashion for Good) focusing on DPP implementation, blockchain-based verification, and Scope 3 emissions traceability.</p></div>
+<div class="ti"><div class="td"></div><div class="ty">2027 – 2029</div><h4>Specialise in regulatory traceability frameworks</h4><p>Contribute to EU ESPR/DPP policy development and textile-specific standards. Publish in peer-reviewed journals on multi-tier data interoperability, CSDDD compliance, and traceability system evaluation for emerging market suppliers.</p></div>
+<div class="ti"><div class="td"></div><div class="ty">2029 – 2031</div><h4>PhD or senior research lead</h4><p>Pursue doctoral research on scalable traceability architectures for textile supply chains — or lead a research team developing open-source, interoperable DPP data standards that work from Bangladesh to Brussels.</p></div>
+</div></div></section>
+
+<hr class="sd ct">
+
+<!-- RESUME -->
+<section id="resume"><div class="ct"><div class="sh"><div class="sl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>Resume</div><div class="st">Relevant experience &amp; education</div></div>
+<div class="rc">
+<div class="rcl"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>Supply Chain Experience</h3>
+<div class="re"><div class="rr">Senior Sourcing Merchandiser</div><div class="rco">GoodEarth Apparels Ltd. — Gazipur, Bangladesh</div><div class="rp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Dec 2023 – May 2025</div><p>Managed multi-tier supplier traceability for raw materials, fabrics, and trims. Negotiated across Tier 2–4 vendors. Ensured material provenance documentation and quality compliance from order placement to delivery.</p></div>
+<div class="re"><div class="rr">Executive Merchandiser</div><div class="rco">Green Smart Shirts Ltd. — Gazipur, Bangladesh</div><div class="rp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Dec 2021 – Nov 2023</div><p>Maintained time and action calendars linking supplier milestones. Managed product development per tech packs with full material traceability from sourcing to production.</p></div>
+<div class="re"><div class="rr">Assistant Merchandiser</div><div class="rco">Fakir Apparels Ltd — Narayanganj, Bangladesh</div><div class="rp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Sep 2019 – Dec 2021</div><p>Sample development with supplier data tracking in SAP. Coordinated vendor communication for on-time raw material in-housing with documented lot traceability.</p></div>
+</div>
+<div class="rcl"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>Education</h3>
+<div class="re"><div class="rr">MSc Innovative Textile Development</div><div class="rco">Saxion University of Applied Sciences — Enschede, NL</div><div class="rp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Sep 2025 – Present &nbsp;|&nbsp; EQF Level 7</div><p>Focus: supply chain traceability, LCA, DPP, circular economy, smart textiles. Current research: operationalizing data collection for Digital Product Passports in circular denim (DPP4CD project with MUD Jeans).</p></div>
+<div class="re"><div class="rr">BSc Textile Engineering</div><div class="rco">BGMEA University of Fashion &amp; Technology — Dhaka, BD</div><div class="rp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>2014 – 2018 &nbsp;|&nbsp; GPA: 3.66/4.00</div><p>Textile engineering fundamentals. Thesis: comparative study of cotton fiber and kans grass fiber properties.</p></div>
+<h3 style="margin-top:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>Research Skills</h3>
+<div class="sr">
+<span class="sp">Supply Chain Traceability</span>
+<span class="sp">Digital Product Passports</span>
+<span class="sp">Life Cycle Assessment (LCA)</span>
+<span class="sp">PEF Methodology</span>
+<span class="sp">Blockchain for SCM</span>
+<span class="sp">GS1 / EPCIS Standards</span>
+<span class="sp">Python / ML</span>
+<span class="sp">EU ESPR / CSDDD</span>
+<span class="sp">Multi-tier Supply Chain Mapping</span>
+<span class="sp">Scope 3 Emissions</span>
+<span class="sp">Stakeholder Interviews</span>
+<span class="sp">SAP / ERP Systems</span>
+</div>
+</div>
+</div></div></section>
+
+<hr class="sd ct">
+
+<!-- SKILL AREAS -->
+<section><div class="ct"><div class="sh"><div class="sl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Core Competencies</div><div class="st">Research skill areas</div></div>
+<div class="sa">
+<div class="sac"><div class="sai" style="background:var(--ap)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div><h4>Supply chain traceability</h4><p>Multi-tier mapping, material provenance verification, DPP data protocols, Tier 2–4 data collection across textile value chains</p></div>
+<div class="sac"><div class="sai" style="background:var(--tl)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0118.8-4.3M22 12.5a10 10 0 01-18.8 4.2"/></svg></div><h4>LCA &amp; environmental footprint</h4><p>PEF-aligned indicator processing, system boundary definition, secondary database evaluation, Scope 3 emissions tracking</p></div>
+<div class="sac"><div class="sai" style="background:var(--il)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--indigo)" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><path d="M12 12v4M8 12h8"/></svg></div><h4>Digital transparency tech</h4><p>Blockchain, RFID, IoT sensors, JSON-LD/GS1/EPCIS interoperability, machine-readable data standards for DPP compliance</p></div>
+<div class="sac"><div class="sai" style="background:var(--wl)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--warm)" stroke-width="2"><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/><path d="M14 2v6h6M10 13l-2 2 2 2M14 17l2-2-2-2"/></svg></div><h4>EU regulatory frameworks</h4><p>ESPR, CSDDD, Textile Labelling Regulation, Corporate Sustainability Reporting Directive (CSRD), due diligence compliance</p></div>
+<div class="sac"><div class="sai" style="background:var(--ap)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div><h4>Applied research methods</h4><p>Mixed-methods design, stakeholder interviews, survey research, Python/ML data analysis, scientific writing for peer review</p></div>
+</div></div></section>
+
+<hr class="sd ct">
+
+<!-- PROJECTS -->
+<section id="projects"><div class="ct"><div class="sh"><div class="sl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>Research Projects</div><div class="st">Selected work at Saxion ITD</div><p class="sde">Three projects demonstrating supply chain traceability research capabilities across regulatory compliance, circular economy, and smart textile innovation.</p></div>
+<div class="pjg">
+
+<div class="pjc"><div class="pjv v1"><div class="pji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/><path d="M14 2v6h6M8 13h2M8 17h2M14 13h2M14 17h2"/></svg></div><div><div class="pjt">Current Research — Applied LCA &amp; DPP</div><h3>DPP4CD: Digital Product Passports for Circular Denim</h3></div></div>
+<div class="pjb"><h4>Operationalizing LCA data collection for EU ESPR compliance</h4><p>Collaborating with MUD Jeans and Tejidos Royo (Valencia, Spain) to develop standardized data collection and validation procedures for Digital Product Passports across the circular denim supply chain (Tier 2–4). Defining system boundaries, functional units, and environmental impact categories aligned with PEF methodology. Addressing critical data gaps using secondary proxies from bAwear, Ecochain, and GRS/OCS certifications.</p>
+<div class="pjh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg><span>Deliverables: LCA data protocol, PEF-aligned environmental indicators, data gap analysis with responsible proxy strategies, step-by-step DPP guidance for circular denim</span></div>
+<div class="pt"><span class="tg tgg">Supply Chain Traceability</span><span class="tg tgi">EU ESPR/DPP</span><span class="tg tgw">LCA/PEF</span><span class="tg tgt">Circular Denim</span></div></div></div>
+
+<div class="pjc"><div class="pjv v3"><div class="pji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><div><div class="pjt">Project 1 — Market Exploration &amp; Circular SCM</div><h3>Kantamanto Social Club</h3></div></div>
+<div class="pjb"><h4>Circular supply chain strategy for remanufactured textiles</h4><p>Mapped the complete circular supply chain for remanufactured garments from discarded home textiles in the Netherlands. Conducted B2B (31) and B2C (186) surveys assessing traceability expectations, pricing, and certification concerns. Identified supply chain partners (Kringcoop, DCW, Makers Unite) and developed a traceable circular business model from waste collection through sorting, remanufacturing, and retail.</p>
+<div class="pjh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg><span>1 kg remanufactured cellulosic textiles saves ~16.86 kg CO₂; 93% of B2B respondents familiar with remanufacturing; 64% interested in integration</span></div>
+<div class="pt"><span class="tg tgg">Circular Supply Chain</span><span class="tg tgw">Market Research</span><span class="tg tgi">TOWS Analysis</span><span class="tg tgt">Traceability Mapping</span></div></div></div>
+
+<div class="pjc"><div class="pjv v2"><div class="pji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div><div><div class="pjt">Project 2 — Smart Textile Prototyping</div><h3>Noosi: Responsive Cushion for Dementia Care</h3></div></div>
+<div class="pjb"><h4>IoT sensor integration and material traceability in smart textiles</h4><p>Developed a responsive smart cushion with integrated piezoresistive and capacitive sensors for detecting anxiety in dementia patients. Relevant to traceability: established material provenance documentation for all textile components (Bouclé PES cover, Twill PES inner layer, Silver-tech conductive yarns), demonstrating how IoT-enabled textiles require traceable material and component data for certification and regulatory compliance.</p>
+<div class="pjh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg><span>Bouclé PES: zero yarn breakage to 20,000 cycles. Arduino-based sensing with full material traceability documentation</span></div>
+<div class="pt"><span class="tg tgi">IoT / Smart Textiles</span><span class="tg tgg">Material Traceability</span><span class="tg tgw">Arduino / C++</span><span class="tg tgt">Healthcare</span></div></div></div>
+
+</div></div></section>
+
+<hr class="sd ct">
+
+<!-- PUBLICATIONS -->
+<section id="publications"><div class="ct"><div class="sh"><div class="sl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>Publications &amp; Research</div><div class="st">Research outputs</div></div>
+<div class="pbl">
+<div class="pbc"><div class="pbi" style="background:var(--ap)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/><path d="M14 2v6h6"/></svg></div><div><h4>Prediction of Standard Minute Value Using Machine Learning in the Garment Industry</h4><p class="pm"><strong>ICSCA 2025</strong> — 14th Int'l Conference on Software &amp; Computer Applications, Kuala Lumpur (Feb 2025). Demonstrates data-driven supply chain optimization using Python/ML.</p></div></div>
+<div class="pbc"><div class="pbi" style="background:var(--tl)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/><path d="M14 2v6h6"/></svg></div><div><h4>DPP4CD: LCA Data Protocol for Digital Product Passports in Circular Denim</h4><p class="pm"><strong>In progress</strong> — Saxion UAS / MUD Jeans collaboration. Step-by-step guidance for collecting and processing LCA data for DPP compliance in circular textile supply chains.</p></div></div>
+<div class="pbc"><div class="pbi" style="background:var(--il)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--indigo)" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg></div><div><h4>Sustainability Through 3R &amp; Innovation System Approach</h4><p class="pm"><strong>Textile Today</strong> — Professional certification in circular economy principles and innovation systems (2020).</p></div></div>
+</div></div></section>
+
+<!-- CONTACT -->
+<section id="contact"><div class="ct">
+<div class="cb"><h2>Open to research positions</h2><p>Looking for roles in supply chain traceability, Digital Product Passports, and circular textile transparency across the EU.</p>
+<div class="cr">
+<a href="mailto:tasadulhemal@gmail.com" class="cl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>tasadulhemal@gmail.com</a>
+<a href="https://linkedin.com/in/mdtihemal" target="_blank" class="cl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+<a href="tel:+31626078471" class="cl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>+31 626 078 471</a>
+<a href="https://orcid.org/0009-0007-8484-5623" target="_blank" class="cl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>ORCID</a>
+<a href="https://github.com/tasadulhemal-dev" target="_blank" class="cl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>GitHub</a>
+</div></div>
+</div></section>
+
+<footer><p>&copy; 2026 M.T.I. Hemal — MSc Innovative Textile Development, <a href="https://www.saxion.nl/" target="_blank">Saxion University of Applied Sciences</a>, Enschede, The Netherlands</p></footer>
+</body>
+</html>
