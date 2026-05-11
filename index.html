@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="MD Tasadul Islam Hemal — Textile engineer and MSc researcher at Saxion University working on Digital Product Passports, circular denim, and supply chain traceability." />
+<title>MD Tasadul Islam Hemal — Circular Denim & Digital Product Passport Research</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+/* ================================================================
+   RAW INDIGO WORKSHOP — Portfolio of MD Tasadul Islam Hemal
+   ================================================================ */
+:root {
+  /* Color tokens */
+  --indigo: #1F2D44;
+  --indigo-deep: #14213D;
+  --indigo-soft: #2D4163;
+  --cream: #F5F2EB;
+  --cream-warm: #EDE7DA;
+  --paper: #FAF8F2;
+  --copper: #B8593E;
+  --copper-deep: #8E3F2A;
+  --rust: #A14B3A;
+  --ink: #14181F;
+  --ash: #5E5A52;
+  --bone: #C8C3B7;
+  --line: rgba(31, 45, 68, 0.12);
+  --line-strong: rgba(31, 45, 68, 0.32);
+
+  /* Typography */
+  --f-display: 'Fraunces', Georgia, serif;
+  --f-body: 'Manrope', system-ui, -apple-system, sans-serif;
+  --f-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* Spacing scale */
+  --s-1: 0.5rem; --s-2: 1rem; --s-3: 1.5rem; --s-4: 2rem;
+  --s-5: 3rem; --s-6: 4rem; --s-7: 6rem; --s-8: 8rem; --s-9: 12rem;
+
+  /* Layout */
+  --max-w: 1280px;
+  --gutter: clamp(1.5rem, 4vw, 3rem);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--f-body);
+  font-weight: 400;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+/* Subtle paper texture overlay */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 25% 35%, rgba(184, 89, 62, 0.018) 0, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(31, 45, 68, 0.022) 0, transparent 55%);
+  z-index: 1;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+img, svg { display: block; max-width: 100%; }
+
+/* ================================================================
+   Layout primitives
+   ================================================================ */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  position: relative;
+  z-index: 2;
+}
+
+.section { padding: var(--s-7) 0; position: relative; }
+.section + .section { border-top: 1px solid var(--line); }
+
+.eyebrow {
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--copper);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+}
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px; height: 1px;
+  background: var(--copper);
+}
+
+.section-num {
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  color: var(--ash);
+  letter-spacing: 0.1em;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-variation-settings: "SOFT" 30, "opsz" 144;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--indigo);
+}
+h2 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  margin-bottom: var(--s-4);
+}
+h3 { font-size: 1.35rem; line-height: 1.25; font-weight: 500; }
+
+p { color: var(--ink); }
+.lede {
+  font-family: var(--f-display);
+  font-size: clamp(1.15rem, 1.6vw, 1.4rem);
+  line-height: 1.5;
+  font-weight: 300;
+  color: var(--indigo);
+  font-variation-settings: "SOFT" 50, "opsz" 32;
+}
+
+/* ================================================================
+   Top navigation
+   ================================================================ */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1.1rem 0;
+  background: rgba(250, 248, 242, 0.75);
+  backdrop-filter: saturate(140%) blur(12px);
+  -webkit-backdrop-filter: saturate(140%) blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s, background 0.3s;
+}
+.nav.scrolled { border-bottom-color: var(--line); }
+.nav-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.nav-mark {
+  font-family: var(--f-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--indigo);
+  letter-spacing: -0.01em;
+  font-variation-settings: "SOFT" 30;
+}
+.nav-mark .dot { color: var(--copper); }
+.nav-links {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+.nav-links a {
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ash);
+  transition: color 0.2s;
+  position: relative;
+}
+.nav-links a:hover { color: var(--indigo); }
+.nav-cta {
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.55rem 1rem;
+  background: var(--indigo);
+  color: var(--cream) !important;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+.nav-cta:hover { background: var(--copper) !important; color: var(--cream) !important; }
+
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+}
+
+/* ================================================================
+   HERO — bold asymmetric layout
+   ================================================================ */
+.hero {
+  min-height: 100vh;
+  padding: var(--s-9) 0 var(--s-7);
+  display: flex;
+  align-items: center;
+  position: relative;
+  background:
+    linear-gradient(180deg, var(--cream) 0%, var(--paper) 100%);
+}
+
+/* Subtle warp/weft pattern as background decoration */
+.hero-pattern {
+  position: absolute;
+  top: 0; right: -10%;
+  width: 60%; height: 100%;
+  opacity: 0.045;
+  pointer-events: none;
+  background-image:
+    linear-gradient(0deg, var(--indigo) 0.5px, transparent 0.5px),
+    linear-gradient(90deg, var(--indigo) 0.5px, transparent 0.5px);
+  background-size: 16px 16px;
+  mask-image: radial-gradient(ellipse at right center, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at right center, black 30%, transparent 75%);
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-5);
+  width: 100%;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.4rem;
+  align-items: center;
+  margin-bottom: var(--s-3);
+}
+.hero-meta span {
+  font-family: var(--f-mono);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ash);
+}
+.hero-meta .pill {
+  background: var(--indigo);
+  color: var(--cream);
+  padding: 0.35rem 0.65rem;
+  border-radius: 2px;
+}
+
+.hero-title {
+  font-family: var(--f-display);
+  font-size: clamp(3.4rem, 9vw, 7rem);
+  line-height: 0.95;
+  font-weight: 400;
+  font-variation-settings: "SOFT" 60, "opsz" 144;
+  letter-spacing: -0.035em;
+  color: var(--indigo);
+  margin-bottom: var(--s-3);
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--copper);
+  font-variation-settings: "SOFT" 100, "opsz" 144;
+  font-weight: 300;
+}
+
+.hero-sub {
+  font-family: var(--f-display);
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  line-height: 1.4;
+  color: var(--indigo-soft);
+  max-width: 36em;
+  margin-bottom: var(--s-4);
+  font-weight: 300;
+  font-variation-settings: "SOFT" 50, "opsz" 36;
+}
+
+.hero-cta-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: var(--s-2);
+}
+.btn {
+  font-family: var(--f-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.95rem 1.5rem;
+  border-radius: 2px;
+  transition: all 0.25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.btn-primary {
+  background: var(--indigo);
+  color: var(--cream) !important;
+}
+.btn-primary:hover { background: var(--copper); }
+.btn-ghost {
+  border: 1px solid var(--line-strong);
+  color: var(--indigo) !important;
+}
+.btn-ghost:hover { border-color: var(--indigo); background: var(--cream-warm); }
+
+.btn .arrow {
+  display: inline-block;
+  transition: transform 0.25s;
+}
+.btn:hover .arrow { transform: translateX(4px); }
+
+/* Hero side-rail with stats */
+.hero-rail {
+  margin-top: var(--s-6);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--s-3);
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.stat-num {
+  font-family: var(--f-display);
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 400;
+  font-variation-settings: "SOFT" 40, "opsz" 60;
+  color: var(--indigo);
+  line-height: 1;
+}
+.stat-num em {
+  font-style: italic;
+  color: var(--copper);
+  font-variation-settings: "SOFT" 100;
+}
+.stat-label {
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ash);
+}
+@media (max-width: 640px) {
+  .hero-rail { grid-template-columns: repeat(2, 1fr); gap: var(--s-2); }
+}
+
+/* ================================================================
+   PROFILE
+   ================================================================ */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: var(--s-6);
+  align-items: start;
+}
+@media (max-width: 880px) {
+  .profile-grid { grid-template-columns: 1fr; gap: var(--s-4); }
+}
+.profile-side h2 { margin-bottom: var(--s-2); }
+.profile-side .eyebrow { margin-bottom: var(--s-2); display: inline-flex; }
+
+.profile-text p { margin-bottom: 1.05rem; font-size: 1.04rem; color: var(--ink); }
+.profile-text p:first-child {
+  font-family: var(--f-display);
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--indigo);
+  font-variation-settings: "SOFT" 50, "opsz" 32;
+}
+.profile-text strong { color: var(--copper-deep); font-weight: 600; }
+
+/* Inline keyword chips */
+.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: var(--s-3); }
+.chip {
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  padding: 0.4rem 0.7rem;
+  background: var(--cream-warm);
+  color: var(--indigo);
+  border-radius: 2px;
+  border: 1px solid var(--line);
+}
+
+/* ================================================================
+   FEATURED PROJECT (DPP4CD)
+   ================================================================ */
+.featured {
+  background: var(--indigo);
+  color: var(--cream);
+  margin-top: 0;
+  border-top: none !important;
+  padding: var(--s-7) 0;
+  position: relative;
+  overflow: hidden;
+}
+.featured .container { position: relative; z-index: 2; }
+.featured::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(0deg, rgba(255,255,255,0.03) 0.5px, transparent 0.5px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 0.5px, transparent 0.5px);
+  background-size: 14px 14px;
+  pointer-events: none;
+}
+
+.featured h2, .featured h3 { color: var(--cream); }
+.featured .eyebrow { color: var(--copper); }
+.featured .eyebrow::before { background: var(--copper); }
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--s-6);
+  align-items: start;
+}
+@media (max-width: 920px) {
+  .featured-grid { grid-template-columns: 1fr; gap: var(--s-5); }
+}
+
+.featured-title {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  margin-bottom: var(--s-3);
+}
+.featured-title em {
+  font-style: italic;
+  color: var(--copper);
+  font-variation-settings: "SOFT" 100;
+}
+.featured-partners {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.4rem;
+  margin-bottom: var(--s-3);
+  padding-bottom: var(--s-3);
+  border-bottom: 1px solid rgba(245, 242, 235, 0.18);
+}
+.featured-partners .label {
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bone);
+}
+.featured-partners strong {
+  font-family: var(--f-display);
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--cream);
+}
+
+.featured-body p {
+  color: var(--cream);
+  opacity: 0.92;
+  font-size: 1.02rem;
+  margin-bottom: 1rem;
+}
+
+/* Right column: project specs */
+.spec-block { margin-bottom: var(--s-4); }
+.spec-block h4 {
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--copper);
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+.spec-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.spec-list li {
+  padding-left: 1.4rem;
+  position: relative;
+  color: var(--cream);
+  opacity: 0.92;
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+.spec-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0.7rem;
+  width: 8px; height: 1px;
+  background: var(--copper);
+}
+
+/* Decorative swatches under partners */
+.denim-strip {
+  display: flex;
+  gap: 6px;
+  margin: var(--s-3) 0 0;
+  height: 8px;
+}
+.denim-strip span {
+  flex: 1;
+  border-radius: 1px;
+}
+.denim-strip span:nth-child(1) { background: var(--copper); }
+.denim-strip span:nth-child(2) { background: var(--cream); opacity: 0.85; }
+.denim-strip span:nth-child(3) { background: var(--indigo-soft); }
+.denim-strip span:nth-child(4) { background: var(--copper-deep); }
+
+/* ================================================================
+   WORK / PROJECT GRID
+   ================================================================ */
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 2rem;
+  margin-bottom: var(--s-5);
+  flex-wrap: wrap;
+}
+.section-head h2 { margin-bottom: 0; max-width: 14ch; }
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+@media (max-width: 800px) {
+  .project-grid { grid-template-columns: 1fr; }
+}
+
+.project-card {
+  background: var(--paper);
+  padding: var(--s-4);
+  position: relative;
+  transition: background 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  min-height: 340px;
+}
+.project-card:hover { background: var(--cream-warm); }
+.project-card .num {
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  color: var(--copper);
+}
+.project-card h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 0.5rem;
+  color: var(--indigo);
+}
+.project-card .partners {
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--ash);
+  text-transform: uppercase;
+}
+.project-card p {
+  color: var(--ink);
+  font-size: 0.96rem;
+  margin-top: auto;
+  flex-grow: 1;
+}
+.project-card .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: var(--s-2);
+}
+.project-card .tag {
+  font-family: var(--f-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  color: var(--ash);
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+}
+
+/* ================================================================
+   CAPABILITIES — three-column grid
+   ================================================================ */
+.cap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s-5);
+  margin-top: var(--s-3);
+}
+@media (max-width: 880px) {
+  .cap-grid { grid-template-columns: 1fr; gap: var(--s-4); }
+}
+.cap {
+  border-top: 1px solid var(--indigo);
+  padding-top: var(--s-3);
+}
+.cap h3 {
+  font-family: var(--f-display);
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: var(--s-2);
+  color: var(--indigo);
+  font-variation-settings: "SOFT" 30;
+}
+.cap-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.cap-tag {
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--indigo);
+  padding: 0.35rem 0.6rem;
+  background: var(--cream-warm);
+  border-radius: 2px;
+}
+.cap-tag.bold {
+  background: var(--indigo);
+  color: var(--cream);
+  font-weight: 500;
+}
+
+/* ================================================================
+   EXPERIENCE TIMELINE
+   ================================================================ */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: var(--s-3);
+}
+.tl-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: var(--s-4);
+  padding: var(--s-3) 0;
+  border-top: 1px solid var(--line);
+  align-items: start;
+}
+.tl-item:first-child { border-top: 1px solid var(--indigo); }
+@media (max-width: 720px) {
+  .tl-item { grid-template-columns: 1fr; gap: 0.5rem; }
+}
+.tl-dates {
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--copper);
+  text-transform: uppercase;
+  padding-top: 0.3rem;
+}
+.tl-role h3 {
+  font-family: var(--f-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--indigo);
+  margin-bottom: 0.3rem;
+  font-variation-settings: "SOFT" 30;
+}
+.tl-org {
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  color: var(--ash);
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+.tl-role p { font-size: 0.98rem; color: var(--ink); max-width: 60ch; }
+
+/* ================================================================
+   PUBLICATION
+   ================================================================ */
+.pub-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--s-3);
+  padding: var(--s-3);
+  border: 1px solid var(--line);
+  background: var(--cream);
+  border-left: 4px solid var(--copper);
+  align-items: center;
+}
+@media (max-width: 720px) {
+  .pub-card { grid-template-columns: 1fr; }
+}
+.pub-year {
+  font-family: var(--f-display);
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: var(--copper);
+  line-height: 1;
+  font-variation-settings: "SOFT" 80, "opsz" 60;
+}
+.pub-meta-label {
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  color: var(--ash);
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+.pub-title {
+  font-family: var(--f-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--indigo);
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+.pub-venue {
+  font-size: 0.92rem;
+  color: var(--ash);
+  font-style: italic;
+}
+.pub-link {
+  font-family: var(--f-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--indigo);
+  text-transform: uppercase;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: color 0.2s;
+}
+.pub-link:hover { color: var(--copper); }
+
+/* ================================================================
+   CONTACT
+   ================================================================ */
+.contact {
+  background: var(--indigo);
+  color: var(--cream);
+  padding: var(--s-7) 0;
+  position: relative;
+  overflow: hidden;
+}
+.contact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(135deg, rgba(184,89,62,0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+.contact .eyebrow { color: var(--copper); }
+.contact .eyebrow::before { background: var(--copper); }
+.contact h2 {
+  color: var(--cream);
+  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  max-width: 16ch;
+  margin-bottom: var(--s-4);
+}
+.contact h2 em { color: var(--copper); font-style: italic; font-variation-settings: "SOFT" 100; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--s-5);
+  align-items: end;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 800px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+.contact-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-3) var(--s-4);
+}
+@media (max-width: 560px) {
+  .contact-details { grid-template-columns: 1fr; }
+}
+.contact-item .label {
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  color: var(--bone);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.contact-item a, .contact-item span {
+  font-family: var(--f-display);
+  font-size: 1.05rem;
+  color: var(--cream);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+.contact-item a:hover { color: var(--copper); border-bottom-color: var(--copper); }
+
+/* Eligibility note */
+.elig {
+  margin-top: var(--s-4);
+  padding-top: var(--s-3);
+  border-top: 1px solid rgba(245,242,235,0.2);
+  font-size: 0.92rem;
+  color: var(--bone);
+  font-family: var(--f-mono);
+  letter-spacing: 0.02em;
+  max-width: 60ch;
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  background: var(--indigo-deep);
+  color: var(--bone);
+  padding: var(--s-4) 0;
+  font-family: var(--f-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+}
+.footer-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ================================================================
+   Reveal animations (intersection-observer driven)
+   ================================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(.2,.7,.2,1);
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal.d1 { transition-delay: 0.06s; }
+.reveal.d2 { transition-delay: 0.14s; }
+.reveal.d3 { transition-delay: 0.22s; }
+.reveal.d4 { transition-delay: 0.3s; }
+.reveal.d5 { transition-delay: 0.38s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===============  NAV  =============== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-mark">M.T.I. Hemal<span class="dot">.</span></a>
+    <div class="nav-links">
+      <a href="#profile">Profile</a>
+      <a href="#dpp4cd">DPP4CD</a>
+      <a href="#work">Work</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact" class="nav-cta">Get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===============  HERO  =============== -->
+<header class="hero" id="top">
+  <div class="hero-pattern"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-meta reveal">
+        <span class="pill">Open to internships · Aug/Sep 2026</span>
+        <span>Enschede, NL · BSN holder</span>
+        <span>MSc · EQF Level 7</span>
+      </div>
+
+      <h1 class="hero-title reveal d1">
+        Circular denim,<br />
+        <em>traceable</em> by design.
+      </h1>
+
+      <p class="hero-sub reveal d2">
+        I'm Tasadul — a textile engineer and MSc researcher building
+        Digital Product Passports, supply-chain mapping, and life-cycle
+        evidence for the fashion industry. Six years on the factory
+        floor, now in the lab.
+      </p>
+
+      <div class="hero-cta-row reveal d3">
+        <a href="#dpp4cd" class="btn btn-primary">
+          Read the DPP4CD case study
+          <span class="arrow">→</span>
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+          Contact me
+        </a>
+      </div>
+
+      <div class="hero-rail reveal d4">
+        <div class="stat">
+          <span class="stat-num"><em>6</em>+</span>
+          <span class="stat-label">Years in garment<br />supply chains</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">04</span>
+          <span class="stat-label">Active research<br />projects</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">02</span>
+          <span class="stat-label">EU industry<br />collaborators</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num"><em>C1</em></span>
+          <span class="stat-label">English<br />(IELTS)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===============  PROFILE  =============== -->
+<section class="section" id="profile">
+  <div class="container">
+    <div class="profile-grid">
+      <div class="profile-side reveal">
+        <span class="eyebrow">01 — Profile</span>
+        <h2>From the<br />factory floor<br />to the data layer.</h2>
+      </div>
+
+      <div class="profile-text reveal d1">
+        <p>
+          Six years sourcing for European retail buyers in Bangladesh
+          taught me what supply-chain data <strong>actually looks like</strong>
+          on the factory floor: where it lives, where it lies, and what it
+          takes to move it across tiers.
+        </p>
+        <p>
+          I'm now an MSc Innovative Textile Development candidate
+          (EQF Level 7) at Saxion University in Enschede, working on
+          Digital Product Passports, Life Cycle Assessment, and circular
+          textile value chains. My current research is in direct industry
+          collaboration with <strong>MUD Jeans</strong> (Netherlands) and
+          <strong>Tejidos Royo</strong> (Valencia, Spain) on a Digital Product
+          Passport for circular denim.
+        </p>
+        <p>
+          I'm looking for a sustainability role in the Netherlands where this
+          combination matters — somewhere working on supply-chain mapping,
+          supplier performance monitoring, LCA, and circular fashion. I'm a
+          BSN holder, currently enrolled at Saxion, and available full-time
+          for a 6-month internship starting Aug/Sep 2026.
+        </p>
+
+        <div class="chips">
+          <span class="chip">Digital Product Passport</span>
+          <span class="chip">LCA</span>
+          <span class="chip">Circular economy</span>
+          <span class="chip">GS1 / EPCIS</span>
+          <span class="chip">CSDDD</span>
+          <span class="chip">ESPR</span>
+          <span class="chip">Scope 3</span>
+          <span class="chip">PEFCR</span>
+          <span class="chip">Cradle to Cradle</span>
+          <span class="chip">ESG</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===============  FEATURED PROJECT: DPP4CD  =============== -->
+<section class="section featured" id="dpp4cd">
+  <div class="container">
+    <span class="eyebrow reveal">02 — Featured case study</span>
+    <div class="featured-grid">
+      <div class="reveal d1">
+        <h2 class="featured-title">
+          Digital Product Passport for <em>Circular Denim</em>
+        </h2>
+        <div class="featured-partners">
+          <span class="label">In collaboration with</span>
+          <strong>MUD Jeans (NL)</strong>
+          <strong>Tejidos Royo (Valencia, ES)</strong>
+        </div>
+        <div class="featured-body">
+          <p>
+            A Digital Product Passport framework built for a real circular-denim
+            supply chain. The work spans three tiers — yarn, fabric, and
+            dyeing & finishing — and translates EU regulatory direction
+            (ESPR, CSDDD) into operational data flows that suppliers can
+            actually fill in.
+          </p>
+          <p>
+            On the methodology side, I co-developed a PEFCR v3.1-aligned
+            yarn-mapping diagram in swim-lane format, designed blank
+            data-collection matrices to gather Scope 3 / LCI data from
+            Tier 2/3 suppliers, and authored three Standard Operating
+            Procedures defining how DPP attributes hand off between
+            supplier tiers. Final discussion and recommendations were
+            delivered directly to industry partners.
+          </p>
+        </div>
+        <div class="denim-strip" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="reveal d2">
+        <div class="spec-block">
+          <h4>Methodology</h4>
+          <ul class="spec-list">
+            <li>PEFCR v3.1-aligned yarn mapping (swim-lane visualisation)</li>
+            <li>Multi-tier supplier data flows, Tier 2 / Tier 3 coverage</li>
+            <li>Scope 3 / LCI data-collection matrices</li>
+            <li>GS1/EPCIS-style attribute hand-offs between tiers</li>
+          </ul>
+        </div>
+        <div class="spec-block">
+          <h4>Deliverables</h4>
+          <ul class="spec-list">
+            <li>3× A4 Standard Operating Procedures (Yarn; Fabric; Dyeing &amp; Finishing)</li>
+            <li>Swim-lane DPP architecture diagram</li>
+            <li>Blank data-collection matrix (Word + PDF)</li>
+            <li>Discussion, conclusion, recommendations deck for industry partners</li>
+            <li>Stakeholder correspondence with Tejidos Royo</li>
+          </ul>
+        </div>
+        <div class="spec-block">
+          <h4>Team</h4>
+          <ul class="spec-list">
+            <li>Three-person student team under Saxion supervisor Laure Erkens</li>
+            <li>Direct collaboration with MUD Jeans &amp; Tejidos Royo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===============  OTHER WORK  =============== -->
+<section class="section" id="work">
+  <div class="container">
+    <div class="section-head">
+      <div class="reveal">
+        <span class="eyebrow">03 — Selected work</span>
+        <h2>Adjacent research<br/>and projects.</h2>
+      </div>
+      <span class="section-num reveal d1">04 projects</span>
+    </div>
+
+    <div class="project-grid">
+      <article class="project-card reveal">
+        <span class="num">/ 01</span>
+        <h3>Kantamanto Social Club — Circular Supply Chain for Remanufactured Textiles</h3>
+        <span class="partners">Saxion · Q2 2025</span>
+        <p>
+          Designed a circular supply-chain concept for remanufactured
+          garments using post-consumer waste flows from the Kantamanto
+          secondhand market in Accra, Ghana — combining multi-tier traceability
+          with social-impact considerations for upstream collectors and tailors.
+        </p>
+        <div class="tags">
+          <span class="tag">Circular economy</span>
+          <span class="tag">Post-consumer waste</span>
+          <span class="tag">Social impact</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal d1">
+        <span class="num">/ 02</span>
+        <h3>Living Technology — Bio-based Textile Coatings from Food Waste</h3>
+        <span class="partners">Saxion · SDG 12 · current</span>
+        <p>
+          Four-person team converting Saxion's institutional waste streams
+          into textile products. My individual subtopic: bio-based coatings
+          from food waste covering antimicrobial, water-repellent,
+          flame-retardant, UV-protective, and self-cleaning functions.
+        </p>
+        <div class="tags">
+          <span class="tag">Bio-based materials</span>
+          <span class="tag">SDG 12</span>
+          <span class="tag">Functional textiles</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal d2">
+        <span class="num">/ 03</span>
+        <h3>Noosi — Responsive Textile for Dementia Care</h3>
+        <span class="partners">Saxion</span>
+        <p>
+          A smart, responsive cushion design exploring how textile
+          materials and embedded electronics can support sensory
+          regulation and emotional comfort for people living with dementia.
+        </p>
+        <div class="tags">
+          <span class="tag">Smart textiles</span>
+          <span class="tag">Health-tech</span>
+          <span class="tag">User-centred design</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal d3">
+        <span class="num">/ 04</span>
+        <h3>ML for Standard Minute Value Prediction</h3>
+        <span class="partners">Peer-reviewed · ICSCA 2025</span>
+        <p>
+          A machine-learning approach to predicting Standard Minute Values
+          in garment production — using historical operation data to
+          shorten the manual time-study cycle that drives line balancing.
+          Presented at the 14th International Conference on Software and
+          Computer Applications in Kuala Lumpur.
+        </p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">scikit-learn</span>
+          <span class="tag">Peer-reviewed</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===============  CAPABILITIES  =============== -->
+<section class="section" id="capabilities" style="background: var(--cream);">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">04 — Capabilities</span>
+      <h2>What I bring to a sustainability team.</h2>
+      <p class="lede" style="max-width: 60ch; margin-bottom: var(--s-4);">
+        Three sides of one practice: regulatory and methodological depth,
+        hands-on industry context, and the data tools to connect them.
+      </p>
+    </div>
+
+    <div class="cap-grid">
+      <div class="cap reveal">
+        <h3>Sustainability &amp; traceability</h3>
+        <div class="cap-tags">
+          <span class="cap-tag bold">Digital Product Passport</span>
+          <span class="cap-tag bold">LCA</span>
+          <span class="cap-tag">GS1 / EPCIS</span>
+          <span class="cap-tag">ESPR readiness</span>
+          <span class="cap-tag">CSDDD</span>
+          <span class="cap-tag">Scope 3 / GHG</span>
+          <span class="cap-tag">PEFCR</span>
+          <span class="cap-tag">Carbon footprint</span>
+          <span class="cap-tag">Cradle to Cradle</span>
+          <span class="cap-tag">Circular economy</span>
+          <span class="cap-tag">Multi-tier mapping</span>
+          <span class="cap-tag">Sustainability reporting</span>
+          <span class="cap-tag">ESG</span>
+          <span class="cap-tag">Recycled &amp; organic materials</span>
+          <span class="cap-tag">Stakeholder engagement</span>
+        </div>
+      </div>
+
+      <div class="cap reveal d1">
+        <h3>Textile &amp; garment industry</h3>
+        <div class="cap-tags">
+          <span class="cap-tag bold">Multi-tier supplier sourcing</span>
+          <span class="cap-tag bold">Buyer compliance frameworks</span>
+          <span class="cap-tag">Tech-pack development</span>
+          <span class="cap-tag">Sample development</span>
+          <span class="cap-tag">SAP order management</span>
+          <span class="cap-tag">Quality management systems</span>
+          <span class="cap-tag">Cost &amp; lead-time negotiation</span>
+          <span class="cap-tag">Restricted-substance lists</span>
+          <span class="cap-tag">Time &amp; action calendars</span>
+          <span class="cap-tag">EU-buyer audits (BSCI / Sedex-style)</span>
+        </div>
+      </div>
+
+      <div class="cap reveal d2">
+        <h3>Data &amp; software</h3>
+        <div class="cap-tags">
+          <span class="cap-tag bold">Python</span>
+          <span class="cap-tag bold">Excel (advanced)</span>
+          <span class="cap-tag">pandas</span>
+          <span class="cap-tag">scikit-learn</span>
+          <span class="cap-tag">Data collection design</span>
+          <span class="cap-tag">CLO 3D</span>
+          <span class="cap-tag">LECTRA Modaris</span>
+          <span class="cap-tag">Adobe Illustrator</span>
+          <span class="cap-tag">Adobe Photoshop</span>
+          <span class="cap-tag">Technical writing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===============  EXPERIENCE  =============== -->
+<section class="section" id="experience">
+  <div class="container">
+    <div class="section-head">
+      <div class="reveal">
+        <span class="eyebrow">05 — Industry experience</span>
+        <h2>Six years moving<br/>orders, people, and<br/>materials.</h2>
+      </div>
+      <span class="section-num reveal d1">2019 — 2025</span>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-dates">Dec 2023 — May 2025</div>
+        <div class="tl-role">
+          <h3>Senior Sourcing Merchandiser</h3>
+          <div class="tl-org">Goodearth Apparels Ltd. · Gazipur, Bangladesh</div>
+          <p>
+            Managed multi-tier supplier relationships across raw-material,
+            fabric, trim, and finishing vendors for European retail buyers.
+            Worked within buyer compliance frameworks covering social and
+            environmental standards (code-of-conduct audits, restricted-substance
+            lists) typical of EU retail customers, and supported supplier
+            evaluation against these requirements.
+          </p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal d1">
+        <div class="tl-dates">Dec 2021 — Nov 2023</div>
+        <div class="tl-role">
+          <h3>Executive Merchandiser</h3>
+          <div class="tl-org">Green Smart Shirts Ltd. · Gazipur, Bangladesh</div>
+          <p>
+            Primary buyer contact through the order life-cycle; built and
+            maintained Time &amp; Action calendars aligning upstream sourcing
+            with downstream production milestones. Coordinated sourcing of
+            preferred and sustainable material options — organic cotton,
+            recycled-content fabrics — in line with buyer sustainability briefs.
+          </p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal d2">
+        <div class="tl-dates">Sep 2019 — Dec 2021</div>
+        <div class="tl-role">
+          <h3>Assistant Merchandiser</h3>
+          <div class="tl-org">Fakir Apparels Ltd. · Narayanganj, Bangladesh</div>
+          <p>
+            Sample development against buyer tech packs; order data
+            management in SAP; vendor coordination for in-house raw-material
+            arrival on schedule and to specification.
+          </p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal d3">
+        <div class="tl-dates">Mar 2019 — Sep 2019</div>
+        <div class="tl-role">
+          <h3>Intern · Garment Production</h3>
+          <div class="tl-org">Northern Tosrifa Group · Tongi, Bangladesh</div>
+          <p>
+            Hands-on training in garment pattern-making, CAD, quality
+            management, and the full sampling workflow.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===============  PUBLICATIONS  =============== -->
+<section class="section" id="publications">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">06 — Publications</span>
+      <h2>Peer-reviewed work.</h2>
+    </div>
+
+    <div class="pub-card reveal d1">
+      <div class="pub-year">2025</div>
+      <div>
+        <div class="pub-meta-label">ICSCA 2025 · Kuala Lumpur, Malaysia</div>
+        <div class="pub-title">
+          Prediction of Standard Minute Value Using Machine Learning in the Garment Industry
+        </div>
+        <div class="pub-venue">
+          Hemal, M.T.I. et al. — 14th International Conference on Software and Computer Applications
+        </div>
+      </div>
+      <a href="https://www.icsca.org/icsca2025.html" target="_blank" rel="noopener" class="pub-link">
+        Conference →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===============  CONTACT  =============== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <span class="eyebrow reveal">07 — Get in touch</span>
+    <h2 class="reveal d1">
+      Let's talk about <em>denim, data,</em> and the trail in between.
+    </h2>
+
+    <div class="contact-grid">
+      <div class="contact-details reveal d2">
+        <div class="contact-item">
+          <span class="label">Email</span>
+          <a href="mailto:tasadulhemal@gmail.com">tasadulhemal@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="label">Phone</span>
+          <a href="tel:+31626078471">+31 6 26078471</a>
+        </div>
+        <div class="contact-item">
+          <span class="label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/mdtihemal/" target="_blank" rel="noopener">linkedin.com/in/mdtihemal</a>
+        </div>
+        <div class="contact-item">
+          <span class="label">GitHub</span>
+          <a href="https://github.com/tasadulhemal-dev" target="_blank" rel="noopener">github.com/tasadulhemal-dev</a>
+        </div>
+        <div class="contact-item">
+          <span class="label">ORCID</span>
+          <a href="https://orcid.org/0009-0007-8484-5623" target="_blank" rel="noopener">0009-0007-8484-5623</a>
+        </div>
+        <div class="contact-item">
+          <span class="label">Based in</span>
+          <span>Enschede, Netherlands</span>
+        </div>
+      </div>
+
+      <div class="reveal d3" style="text-align: right;">
+        <a href="Resume_Tasadul_Islam_Hemal.pdf" download class="btn btn-primary" style="background: var(--copper); color: var(--cream) !important;">
+          Download CV (PDF)
+          <span class="arrow">↓</span>
+        </a>
+      </div>
+    </div>
+
+    <p class="elig reveal d4">
+      Currently enrolled full-time at Saxion University of Applied Sciences (MSc, EQF 7).
+      Residing in the Netherlands with a valid BSN. Available full-time (40 hrs/week)
+      for a 6-month internship starting Aug or Sep 2026.
+    </p>
+  </div>
+</section>
+
+<!-- ===============  FOOTER  =============== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span>© 2026 MD Tasadul Islam Hemal — Enschede, NL</span>
+    <span>Built by hand. No frameworks. Indigo &amp; copper.</span>
+  </div>
+</footer>
+
+<script>
+  // Sticky nav state on scroll
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    if (window.scrollY > 24) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Intersection-observer reveal animations
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+</script>
+</body>
+</html>
